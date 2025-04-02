@@ -82,3 +82,22 @@ function updateCounter() {
 
 setInterval(updateCounter, 50); // Adjust interval for speed
 
+document.addEventListener("DOMContentLoaded", () => {
+  const stepElements = document.querySelectorAll(".timeline .step");
+
+  const stepObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 300); // staggered entrance
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  stepElements.forEach((step) => {
+    stepObserver.observe(step);
+  });
+});
+
