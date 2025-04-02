@@ -271,3 +271,65 @@ body {
         width: 100%; /* Full width for smaller screens */
     }
 }
+
+/* Timeline Section */
+.timeline {
+    background: #FFFFFF;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 2px solid #E0C878;
+  }
+  
+  .timeline h2 {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .step {
+    flex: 1 1 18%;
+    background: #FAF3E0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  
+  .step.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .step .circle {
+    background: linear-gradient(45deg, #E0C878, #B89A65);
+    color: #FFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .step h3 {
+    color: #333333;
+    margin-top: 10px;
+  }
+  
+  .step p {
+    font-size: 0.95rem;
+    color: #555555;
+  }
+  
